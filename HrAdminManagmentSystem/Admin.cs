@@ -18,7 +18,7 @@ namespace HrAdminManagmentSystem
             this.Password = password;
         }
 
-
+        
         public bool GetRights()
         {
             bool Right = false;
