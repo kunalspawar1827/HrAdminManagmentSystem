@@ -12,6 +12,7 @@ namespace HrAdminManagmentSystem
         {
             Console.WriteLine("These Is Concole Application");
             Console.WriteLine("New Commit");
+            Console.WriteLine("New Commit2");
             Console.ReadLine();
 
         }
