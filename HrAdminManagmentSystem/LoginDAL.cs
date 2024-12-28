@@ -29,10 +29,26 @@ namespace HrAdminManagmentSystem
         {
             try
             {
-                Console.WriteLine("====== HR MANAGMENT SYSTEM ====== ");
-
+                
+                Console.WriteLine("========================================");
+                Console.WriteLine("            * HR MANAGMENT SYSTEM *           ");
+                Console.WriteLine("========================================");
             }
             catch (Exception ex) { }
         }
+
+        public static void PrintMenu()
+        {
+            Console.WriteLine("========================================");
+            Console.WriteLine("             Employee Manager           ");
+            Console.WriteLine("========================================");
+            Console.WriteLine("1. View All Employees in Department");
+            Console.WriteLine("2. Add Employee to Department");
+            Console.WriteLine("3. Edit Employee Details");
+            Console.WriteLine("4. Delete Employee");
+            Console.WriteLine("========================================");
+            Console.WriteLine("Please select an option (1-4): ");
+        }
+
     }
 }

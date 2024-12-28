@@ -20,7 +20,7 @@ namespace HrAdminManagmentSystem
 
             try
             {
-                label:
+            label:
                 Console.Write("Enter Username : ");
                 Username = Console.ReadLine().ToString();
                 if (!string.IsNullOrEmpty(Username) || Username != "")
@@ -30,10 +30,48 @@ namespace HrAdminManagmentSystem
                     bool res = loginDAL.IsValidLogin(Username, Pass);
                     if (res)
                     {
-                        /* Make Menu To Perform Operations */
+                    /* Make Menu To Perform Operations */
+                    PrintMenu:
                         Console.Clear();
                         LoginDAL.DisplyHeading();
                         Console.WriteLine($"Welocome {Username}");
+                        Console.WriteLine();
+                        LoginDAL.PrintMenu();
+
+                        int Choice = Convert.ToInt32(Console.ReadLine());
+                        if (typeof(int) == Choice.GetType())
+                        {
+                            switch (Choice)
+                            {
+                                case 1:
+                                    Console.WriteLine("List Of All Employees");
+                                    break;
+                                case 2:
+                                    Console.WriteLine("Add Employees");
+                                    break;
+                                case 3:
+                                    Console.WriteLine("Edit Employees");
+                                    break;
+                                case 4:
+                                    Console.WriteLine("Delete Employees");
+                                    break;
+                                default: Console.WriteLine("Choose Option between Given Menu");
+                                         Console.ReadLine();
+                                   
+                                    goto PrintMenu;
+                                   
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Eneter Valid Integer Input");
+                            Console.ReadLine();
+                            goto PrintMenu;
+                        }
+
+
+
+
 
 
                     }
